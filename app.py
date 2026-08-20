@@ -1,5 +1,5 @@
 import streamlit as st
-import tensorflow as tf
+import keras
 from PIL import Image, ImageOps
 import numpy as np
 
@@ -14,7 +14,7 @@ st.subheader("진주시 재활용 배출 규정에 맞춘 쓰레기 분류 서�
 
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model("keras_model.h5", compile=False)
+    model = keras.models.load_model("keras_model.h5", compile=False)
     class_names = open("labels.txt", "r", encoding="utf-8").readlines()
     return model, class_names
 
