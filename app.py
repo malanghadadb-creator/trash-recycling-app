@@ -1,5 +1,5 @@
 import streamlit as st
-import tf_keras as tf
+import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
 
